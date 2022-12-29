@@ -3,6 +3,9 @@ print('Name1:',name1)
 print('Name2:',name2)
 print('Name3:',name3)
 Prabakaran How are You to Work Available
+How are You You Well
+new Objects
+How are You
 #########
 Enter the value:Prabakaran Sankar Manikandan
 Name1: Prabakaran

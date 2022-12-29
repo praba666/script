@@ -1,3 +1,4 @@
+GIT MERGE PURPOSE ONLY
 name1,name2,name3=input('Enter the value:').split()
 print('Name1:',name1)
 print('Name2:',name2)

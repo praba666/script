@@ -1,0 +1,125 @@
+#FIND THE SIZE OF A TUPLE IN PYTHON:
+import sys
+tuple1=('a',1,'b',2,'c',3)
+tuple2=('geek','prabha','chandru','vishal','chnadru')
+tuple3=((1,'lion'),(2,'tiger'),(3,'cat'))
+print('Size of Tuples:'+str(sys.getsizeof(tuple1))+'Bytes')
+print('Size of Tuples:'+str(sys.getsizeof(tuple2))+'Bytes')
+print('Size of Tuples:'+str(sys.getsizeof(tuple3))+'Bytes')
+##Size of Tuples:88Bytes
+##Size of Tuples:80Bytes
+##Size of Tuples:64Bytes
+#####################################################################################################	
+#FIND THE SIZE OF A TUPLE IN PYTHON:
+import sys
+tuple1=('a',1,'b',2,'c',3)
+tuple2=('geek','prabha','chandru','vishal','chnadru')
+tuple3=((1,'lion'),(2,'tiger'),(3,'cat'))
+print('Size of Tuples:'+str(tuple1.__sizeof__())+'Bytes')
+print('Size of Tuples:'+str(tuple1.__sizeof__())+'Bytes')
+print('Size of Tuples:'+str(tuple1.__sizeof__())+'Bytes')
+##Size of Tuples:72Bytes
+##Size of Tuples:72Bytes
+##Size of Tuples:72Bytes
+###########################################################################################
+#PYTHON MAXIMUM AND MINIMUM K ELEMENTS IN TUPLE:
+testtup=(5,20,3,7,6,8)
+print('The Original tuple is:'+str(testtup))
+k=2
+testtup=list(testtup)
+temp=sorted(testtup)
+res=tuple(temp[:k]+temp[-k:])
+print('The Extracted Values is:'+str(res))
+##The Original tuple is:(5, 20, 3, 7, 6, 8)
+##The Extracted Values is:(3, 5, 8, 20)
+
+
+#PYTHON MAXIMUM AND MINIMUM K ELEMENTS IN TUPLE:
+testtup=(5,20,3,7,6,8)
+print('The Original tuple is:'+str(testtup))
+k=4
+testtup=list(testtup)
+temp=sorted(testtup)
+print(temp)
+res=tuple(temp[-k:])
+print(res)
+##The Original tuple is:(5, 20, 3, 7, 6, 8)
+##[3, 5, 6, 7, 8, 20]
+##(6, 7, 8, 20)
+##########################################################################################
+#PYTHON PROGRAM TO CREATE A LIST OF TUPLES FROM GIVEN LIST HAVING NUMBER AND ITS CUBE IN EACH NUMBER:
+list1=[1,2,3,4,5]
+res=[(val,pow(val,3)) for val in list1]
+print(res)
+##[(1, 1), (2, 8), (3, 27), (4, 64), (5, 125)]
+#################################################################################################ds
+#   PYTHON ADDING TUPLE TO LIST AND VICE VERSA:
+testlist=[5,6,7]
+print('The Original string is :'+str(testlist))
+testtup=(9,10)
+testlist=testlist+list(testtup)
+print('The Container After the Addition:'+str(testlist))
+##The Original string is :[5, 6, 7]
+##The Container After the Addition:[5, 6, 7, 9, 10]
+
+#   PYTHON ADDING TUPLE TO LIST AND VICE VERSA:
+testlist=[5,6,7]
+print('The Original string is :'+str(testlist))
+testtup=(9,10)
+res=list(testtup)+testlist
+print('The Container After the Addition:'+str(res))
+##The Original string is :[5, 6, 7]
+##The Container After the Addition:[9, 10, 5, 6, 7]
+############################################################################ 
+#PYTHON REMOVE TUPLES OF LENGTH K:
+tuple1=[(6,),(4,5),(6,),(5,6,6,8),(4,8,9,5,8)]
+print('The Original list:'+str(tuple1))
+m0kk=1
+res=[ele for ele in tuple1 if len(ele)!=k]
+print('Filtered List:'+str(res))
+##The Original list:[(6,), (4, 5), (6,), (5, 6, 6, 8), (4, 8, 9, 5, 8)]
+##Filtered List:[(4, 5), (5, 6, 6, 8), (4, 8, 9, 5, 8)]
+##################################################################################################
+#PYTHON PROGRAM TO SORT A LIST OF TUPLES BY SECOND ITEM:
+def sorttuple(tup):
+    return (sorted(tup,key=lambda x: x[1]))
+tup=[('rishav',10),('mani',2),('arun',5),('kalai',6)]
+print(sorttuple(tup))
+##[('mani', 2), ('arun', 5), ('kalai', 6), ('rishav', 10)]
+#######################################################################################################                                                                                                                                                                                                                                                                                                                  
+#PYTHON ORDER TUPLES BY LIST:
+testlist=[('gfg',3),('best',9),('cs',10),('geeks',2)]
+print('The Orederd list is:'+str(testlist))
+orderlist=['geeks','best','cs','gfg']
+temp=dict(testlist)
+res=[(key,temp[key]) for key in orderlist]
+print('The Ordered Tuple list:'+ str(res))
+##The Orederd list is:[('gfg', 3), ('best', 9), ('cs', 10), ('geeks', 2)]
+##The Ordered Tuple list:[('geeks', 2), ('best', 9), ('cs', 10), ('gfg', 3)]
+###################################################################################################################
+#PYTHON FLATTEN TUPLE OF LIST TO LIST:
+testtuple=([5,6],[6,7,8,9],[3])
+print('The Original Tuple:'+str(testtuple))
+res=tuple(sum(testtuple,[]))
+print('The Flattedend Tuple:'+str(res))
+##The Original Tuple:([5, 6], [6, 7, 8, 9], [3])
+##The Flattedend Tuple:(5, 6, 6, 7, 8, 9, 3)
+##################################################################################################################
+#PYTHON CONVERT NESTED TUPLE TO CUSTOM KEY DICTIONARY:
+testtuple=((4,'gfg',10),(5,'is',8),(6,'best',10))
+print('The Orginal Tuple:'+str(testtuple))
+res=[{'key':sub[0],'value':sub[1],'id':sub[2]} for sub in testtuple]
+print('The Converted Dictionary:'+str(res))
+##The Orginal Tuple:((4, 'gfg', 10), (5, 'is', 8), (6, 'best', 10))
+##The Converted Dictionary:[{'key': 4, 'value': 'gfg', 'id': 10}, {'key': 5, 'value': 'is', 'id': 8}, {'key': 6, 'value': 'best', 'id': 10}]
+#######################################################################################################################
+#PYTHON CONVERT NESTED TUPLE TO CUSTOM KEY DICTIONARY:
+testtuple=((4,'gfg',10),(5,'is',8),(6,'best',10))
+print('The Orginal Tuple:'+str(testtuple))
+keys=['key','value','id']
+res=[{key:val for key,val in zip(keys,sub)} for sub in testtuple]
+print('The Converted Dictionary:'+str(res))
+##The Orginal Tuple:((4, 'gfg', 10), (5, 'is', 8), (6, 'best', 10))
+##The Converted Dictionary:[{'key': 4, 'value': 'gfg', 'id': 10}, {'key': 5, 'value': 'is', 'id': 8}, {'key': 6, 'value': 'best', 'id': 10}]
+####################################################################################################################
+  

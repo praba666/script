@@ -1,0 +1,218 @@
+name1,name2,name3=input('Enter the value:').split()
+print('Name1:',name1)
+print('Name2:',name2)
+print('Name3:',name3)
+#########
+Enter the value:Prabakaran Sankar Manikandan
+Name1: Prabakaran
+Name2: Sankar
+Name3: Manikandan
+#########################################################################################
+para=[]
+print('Enter the a para :')
+while True:
+    line=input('enter sentence')
+    if line:
+        para.append(line)
+    else:
+        break
+print(para)
+output='\n'.join(para)
+print(output)
+#########
+Enter the a para :
+
+enter sentence ram is good.
+
+enter sentencehe is in salem.
+
+enter sentencestudying in salem.
+
+enter sentence
+[' ram is good.', 'he is in salem.', 'studying in salem.']
+ ram is good.
+he is in salem.
+studying in salem.
+########################################################################################################
+testtuple = ((5, 6), (6, 7, 8, 9), (3, 4, 5, 6), (2, 5, 6, 8))
+print('The Original Tuple:'+str(testtuple))
+res = sum(testtuple, ())
+print(res)
+#################################################################################################################
+s='  Tutor Joes   '
+print(len(s))
+print(len(s.strip()))
+print(len(s.lstrip()))
+##########
+15
+10
+13
+##################################################################################################################
+days=int(input("Enter the days:"))
+if days==0:
+    print('Good  No Fine')
+elif days>=1 and days<=5:
+    print("Fine Amount: ",days*0.5)
+elif days>5 and days<=10:
+    print('Fine Amount: ',days*1)
+elif days>10 and days<=30:
+    print('Fine Amount: ',days*5)
+else:
+    print("Memborship Cancelled")
+#OUTPUT#
+Enter the days:32
+Memborship Cancelled
+Enter the days:15
+Fine Amount:  75
+#################################################################################################################
+"""a={1,2,3,4,5}
+b={5,6,7,8,9}
+c=a.intersection(b)
+print(c)
+a.intersection_update(b)
+print(a)
+###output
+{5}
+{5}
+
+c=a.symmetric_difference(b)
+print(c)
+a.symmetric_difference_update(b)
+print(a)
+#output
+{1, 2, 3, 4, 6, 7, 8, 9}
+{1, 2, 3, 4, 6, 7, 8, 9}
+"""
+a={5,6,7}
+b={5,6,7}
+c=a.isdisjoint(b)
+print(c)
+c=a.issubset(b)
+print(c)
+c=a.issuperset(b)
+print(c)
+#output
+False
+True
+True
+##################################################################################################################
+#IDENTIFY OPERATOR:
+a=[1,2]
+b=[1,2]
+c=a
+print(id(a))
+print(id(c))
+print(id(b))
+print(a is b)
+print(a is b)
+print(a==b)
+print(a is not c)
+print(a is not b)
+print(a!=b)
+####OUTPUT
+1081129645632
+1081129645632
+1081133269440
+False
+False
+True
+False
+True
+False
+############################################################################################################
+#MEMBERSHIP OPERATOR:
+a=[10,20,30,40]
+print(22 in a)
+print(30 in a)
+print(22 not in a)
+##OUTPUT
+False
+True
+True
+########################################################################################################## 
+import datetime as dt
+currentdate=dt.date.today()
+print("Current Date: ",currentdate)
+newdate=dt.date(2021,12,6)
+print(newdate)
+print("Year: ",newdate.year)
+print("Month: ",newdate.month)
+print("Day: ",newdate.day)
+print("................................")
+a=dt.time(10,25,5,222)
+print(a)
+print("Hour:",a.hour)
+print("Minute:",a.minute)
+print("Second:",a.second)
+print("Second:",a.microsecond)
+print("..................................")
+currenttime=dt.datetime.now()
+print("Cureent Time:",currenttime)
+print("....................................")
+new=dt.datetime(2021,12,6,5,6,30)
+print(new)
+print(new.date())
+print(new.time())
+print("....................................")
+current=dt.datetime.now()
+newyear=dt.datetime(2022,1,1)
+difference=newyear-current
+print(difference)
+s=current.strftime("%A %B %d %Y")
+print(s)
+#output
+2021-12-06
+Year:  2021
+Month:  12
+Day:  6
+................................
+10:25:05.000222
+Hour: 10
+Minute: 25
+Second: 5
+Second: 222
+..................................
+Cureent Time: 2021-11-26 05:59:57.495769
+##############OUTPUT##############
+Current Date:  2021-11-26
+2021-12-06
+Year:  2021
+Month:  12
+Day:  6
+................................
+10:25:05.000222
+Hour: 10
+Minute: 25
+Second: 5
+Second: 222
+..................................
+Cureent Time: 2021-11-26 06:20:27.258901
+....................................
+2021-12-06 05:06:30
+2021-12-06
+05:06:30
+....................................
+35 days, 17:39:32.741099
+Friday November 26 2021
+##################################################################################################################
+import math
+print(math.sqrt(4))
+print(math.ceil(1.555))
+print(math.floor(1.555))
+print(math.factorial(5))
+print(math.pow(2,3))
+print(math.log2(2))
+print(math.log10(2))
+print(math.pi)
+print(math.e)
+#####OUTPUT#########
+2.0
+2
+1
+120
+8.0
+1.0
+0.3010299956639812
+3.141592653589793
+2.718281828459045
+######################################################################################################################
